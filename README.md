@@ -1,6 +1,6 @@
 # HEALTH-CAR INSURANCES CROSS SELL
 
-<img src="/home/valcilio/respos/heal_insu_class/github/heal-car.png" alt="Health-Car Insuranc" style="zoom:70%;" />
+<img src="heal-car.png" alt="Health-Car Insuranc" style="zoom:70%;" />
 
 ## **PREMISES:**
 
@@ -48,37 +48,37 @@ The dataset originally has about 173909 rows and 12 columns.
 
 When analyzing the column types, some modifications were made from string to integer and no lines with NA were found, in addition to a statistical description, as in the image below. 
 
-<img src="/home/valcilio/respos/heal_insu_class/github/technical/statistic.png" alt="Health-Car Insuranc" style="zoom:70%;" />
+<img src="technical/statistic.png" alt="Health-Car Insuranc" style="zoom:70%;" />
 
 In the feature engineering part, initially a study was carried out on the features to understand which features it would be possible to derive and later four features were due (see image below) that helped in the analysis of the data later.
 
-<img src="/home/valcilio/respos/heal_insu_class/github/technical/feature_engineering.png" alt="Health-Car Insuranc" style="zoom:70%;" />
+<img src="technical/feature_engineering.png" alt="Health-Car Insuranc" style="zoom:70%;" />
 
 In the exploratory data analysis part, some important analyzes were performed. The distributions were checked and all of them are far from a normal one, while it was possible to obtain 3 relevant insights for the business I separeted some features to the model after.
 
 After that, the data preparation was made with this metodology:
 
-<img src="/home/valcilio/respos/heal_insu_class/github/technical/data_preparation.png" alt="Health-Car Insuranc" style="zoom:70%;" />
+<img src="technical/data_preparation.png" alt="Health-Car Insuranc" style="zoom:70%;" />
 
 In the feature selection was used the Random Forest Feature Importance's Technique and Boruta, after that I mescled with my manual select and the result is below:
 
-<img src="/home/valcilio/respos/heal_insu_class/github/technical/cols_selected.png" alt="Health-Car Insuranc" style="zoom:70%;" />
+<img src="technical/cols_selected.png" alt="Health-Car Insuranc" style="zoom:70%;" />
 
 The models that I tested were XGBoost, LGBM, Naive Bayes and Random Forest, to implement some different techniques the performances are in the image.
 
-<img src="/home/valcilio/respos/heal_insu_class/github/technical/models_perf.png" alt="Health-Car Insuranc" style="zoom:70%;" />
+<img src="technical/models_perf.png" alt="Health-Car Insuranc" style="zoom:70%;" />
 
 After that, was made a cross validation to check the real performance of these models in this problem, check below the cross validation performances:
 
-<img src="/home/valcilio/respos/heal_insu_class/github/technical/cross_val.png" alt="Health-Car Insuranc" style="zoom:70%;" />
+<img src="technical/cross_val.png" alt="Health-Car Insuranc" style="zoom:70%;" />
 
 Was chosed to follow with the LGBMClassifier because this model has a better performance mean between the ROC AUC Score and the Top K Score. Then, was made the fine tuning with the random search and used the cumulative gains curve to check the results from the model in the dataset of test.
 
-<img src="/home/valcilio/respos/heal_insu_class/github/technical/cum_gains.png" alt="Health-Car Insuranc" style="zoom:70%;" />
+<img src="technical/cum_gains.png" alt="Health-Car Insuranc" style="zoom:70%;" />
 
 With this plot is possible to see the maximum of this sample that need to be used to get the best result is around 58% of the sample dataset. and with the lift curve below is possible to see that the model perform aroun twice better than a mean model.
 
-<img src="/home/valcilio/respos/heal_insu_class/github/technical/lift_curv.png" alt="Health-Car Insuranc" style="zoom:70%;" />
+<img src="technical/lift_curv.png" alt="Health-Car Insuranc" style="zoom:70%;" />
 
 In final, was made the deployment of the model through the Heroku with a API created to this model and after using the google sheets to call the results from this API and put it in production.
 
