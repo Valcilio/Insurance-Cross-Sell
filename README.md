@@ -1,6 +1,6 @@
 # HEALTH-CAR INSURANCES CROSS SELL
 
-<img src="heal-car.png" alt="Health-Car Insuranc" style="zoom:70%;" />
+<img src="heal-car.png" alt="Health-Car Insuranc" style="zoom:20%;" />
 
 ## **PREMISES:**
 
